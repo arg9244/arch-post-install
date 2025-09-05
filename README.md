@@ -7,13 +7,13 @@ An automated script to configure a fresh Arch Linux installation with essential 
 Run this command in your terminal after a fresh Arch Linux installation:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/YOUR_USERNAME/arch-post-install/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/arg9244/arch-post-install/master/install.sh | bash
 ```
 
 Or clone and run manually:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/arch-post-install.git
+git clone https://github.com/arg9244/arch-post-install.git
 cd arch-post-install
 chmod +x install.sh
 ./install.sh
