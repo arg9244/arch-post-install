@@ -6,11 +6,24 @@ An automated script to configure a fresh Arch Linux installation with essential 
 
 Run this command in your terminal after a fresh Arch Linux installation:
 
+**Quick install (shorter command - easier to type in TTY):**
+```bash
+curl -fsSL github.com/arg9244/arch-post-install/raw/master/i|bash
+```
+
+**Alternative short command:**
+```bash
+curl -fsSL github.com/arg9244/arch-post-install/raw/master/install.sh|bash
+```
+
+**Full command (original):**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/arg9244/arch-post-install/master/install.sh | bash
 ```
 
-Or clone and run manually:
+> **💡 Tip:** The quick install command (`i`) is recommended for fresh installs as it's much shorter to type in TTY. All commands do the same thing: automatically clone the repository, install dependencies, and run the full installation.
+
+**Or clone and run manually:**
 
 ```bash
 git clone https://github.com/arg9244/arch-post-install.git
@@ -51,9 +64,11 @@ Restores your personal configuration files for:
 ## Prerequisites
 
 - Fresh Arch Linux installation
-- `paru` AUR helper installed
+- `paru` AUR helper installed (script will check and guide you if missing)
 - Internet connection
 - Non-root user with sudo privileges
+
+> **Note:** The script automatically handles git installation if needed and clones the repository for you.
 
 ## Manual Steps Required
 
