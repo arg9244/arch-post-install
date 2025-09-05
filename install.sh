@@ -14,7 +14,35 @@ echo -e "${BLUE}    Arch Linux Post-Installation Script   ${NC}"
 echo -e "${BLUE}===========================================${NC}"
 echo ""
 
+# Check if we're running from a downloaded script (via curl) or local clone
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [[ ! -d "$SCRIPT_DIR/scripts" ]]; then
+    echo -e "${YELLOW}Cloning repository to get all required files...${NC}"
+    
+    # Check if git is installed
+    if ! command -v git &> /dev/null; then
+        echo -e "${RED}Error: git is not installed${NC}"
+        echo "Please install git first: sudo pacman -S git"
+        exit 1
+    fi
+    
+    # Clone the repository
+    REPO_DIR="$HOME/arch-post-install"
+    if [[ -d "$REPO_DIR" ]]; then
+        echo -e "${YELLOW}Repository already exists, updating...${NC}"
+        cd "$REPO_DIR"
+        git pull
+    else
+        git clone https://github.com/arg9244/arch-post-install.git "$REPO_DIR"
+        cd "$REPO_DIR"
+    fi
+    
+    # Update SCRIPT_DIR to the cloned repository
+    SCRIPT_DIR="$REPO_DIR"
+    
+    echo -e "${GREEN}Repository cloned successfully!${NC}"
+    echo ""
+fi
 
 # Check if running as root
 if [[ $EUID -eq 0 ]]; then
