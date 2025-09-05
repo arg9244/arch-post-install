@@ -22,9 +22,10 @@ PACKAGES=(
     mpv
     resources
     zen-browser-bin
-    throne
+    hiddify-next-bin
     transmission
-    jdownloader
+    varia
+    jdownloader2
     git
     code
     bun-bin
@@ -36,7 +37,6 @@ PACKAGES=(
     mangohud
     wqy-zenhei
     alacritty
-    pcmanfm
     extension-manager
 )
 
