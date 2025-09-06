@@ -27,7 +27,7 @@ PACKAGES=(
     transmission-cli
     varia
     jdownloader2
-    code
+    visual-studio-code-bin 
     bun-bin
     cachyos-gaming-meta
 #    gamescope
