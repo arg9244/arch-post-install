@@ -15,6 +15,7 @@ echo "=== Installing Required Packages ==="
 PACKAGES=(
     gdm
     gnome-control-center
+    extension-manager
     ghostty
     baobab
     loupe
@@ -23,21 +24,15 @@ PACKAGES=(
     resources
     zen-browser-bin
     hiddify-next-bin
-    transmission
+    transmission-cli
     varia
     jdownloader2
-    git
     code
     bun-bin
     cachyos-gaming-meta
-    gamescope
-    goverlay
-    lib32-mangohud
-    lutris
-    mangohud
-    wqy-zenhei
-    alacritty
-    extension-manager
+#    gamescope
+#    goverlay
+#    lutris
 )
 
 echo "Installing packages using paru..."
