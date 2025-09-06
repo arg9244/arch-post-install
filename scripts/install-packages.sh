@@ -17,6 +17,10 @@ PACKAGES=(
     gnome-control-center
     extension-manager
     ghostty
+    git
+    nano
+    fastfetch
+    wget
     baobab
     loupe
     file-roller
